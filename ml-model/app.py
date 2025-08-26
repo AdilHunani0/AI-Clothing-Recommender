@@ -22,8 +22,8 @@ CORS(app,
 
 # MongoDB connection
 try:
-    client = MongoClient('mongodb://localhost:27017/')
-    db = client['fashiondb']
+    client = MongoClient('')
+    db = client['']
     logger.debug("MongoDB connection established to fashiondb")
 except Exception as e:
     logger.error(f"Failed to connect to MongoDB: {e}")
@@ -154,3 +154,4 @@ if __name__ == '__main__':
     print("🌐 CORS enabled for all origins")
     print("=" * 50)
     app.run(debug=True, host='0.0.0.0', port=5001)
+
